@@ -1,6 +1,7 @@
 //setup server
 let express = require('express')
 let bp = require('body-parser')
+let cors = require('cors')
 let server = express()
 let port = 3000
 
@@ -8,6 +9,7 @@ let port = 3000
 require('./server-assets/db/index')
 
 //register middleware
+server.use(cors())
 server.use(bp.json())
 server.use(bp.urlencoded({
   extended: true
