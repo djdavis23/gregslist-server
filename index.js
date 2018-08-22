@@ -17,10 +17,12 @@ server.use(bp.urlencoded({
 
 //Routes
 let carRoutes = require('./server-assets/routes/car-routes')
+let houseRoutes = require('./server-assets/routes/house-routes')
 
 
 
 server.use('/api/cars', carRoutes)
+server.use('/api/houses', houseRoutes)
 
 
 
